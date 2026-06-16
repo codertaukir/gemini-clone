@@ -1,0 +1,25 @@
+.btn-color{
+    background-color: var(--btn-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+    box-shadow: 2px 2px 20px var(--btn-background-color) ;
+
+
+}
+
+.btn-color:active{
+    transform: scale(0.95);
+}
+
+.btn-color svg{
+    color: var(--btn-background-color);
+    width: 30px;
+    height: 30px;
+}

@@ -1,0 +1,106 @@
+.sidebar{
+    padding: 30px 20px;
+    height: 100vh;
+    width:15vw;
+    overflow: auto;
+    background-color: var(--background-color);
+    color : var(--color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    transition: all 0.3s;
+    scrollbar-width: none;
+}
+
+.sidebar svg{
+    width: 20px;
+    height: 20px;
+    color: var(--color);
+}
+#hem{
+    cursor: pointer;
+    
+}
+#hem:hover{
+    background-color: rgb(117, 121, 123);
+}
+
+.hem2{
+
+    margin-left: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.hem1{
+    margin-left: 6px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.newchat{
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.newchat:hover{
+    cursor: pointer;
+    background-color: rgb(117, 121, 123);
+}
+
+.recent{
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    scrollbar-width: 0px;
+}
+.recent:hover{
+    cursor: pointer;
+    background-color: rgb(117, 121, 123);
+}
+
+.hide{
+    align-items: center;
+    transition: all 0.3s;
+    gap: 0px;
+    
+}
+.center{
+    align-items: center;
+    transition: all 0.3s;
+    padding: 30px 5px;
+    width: 10vh;
+    
+
+}
+
+@media (max-width : 750px) {
+    .sidebar{
+        display: none;
+    
+}
+}

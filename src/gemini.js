@@ -1,0 +1,19 @@
+import {GoogleGenAI} from '@google/genai';
+
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+
+
+
+
+const ai = new GoogleGenAI({apiKey: GEMINI_API_KEY});
+
+async function main(promte) {
+  const response = await ai.models.generateContent({
+    model: 'gemini-2.5-flash',
+    contents: `${promte}`,
+  });
+  
+  return response.text
+}
+
+export default main;

@@ -1,0 +1,214 @@
+@keyframes loder{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+
+.chatsections{
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--color);
+    flex: 1 ;
+}
+
+
+.topsection{
+    height: 75vh;
+    width: 100%; display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y:  auto ;
+
+
+
+    & .loder {
+        padding: 0 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+             
+        & hr {
+        border-radius: 5px;
+        height: 15px;
+        width: 100%;
+        border: none;
+        background-color: rgb(108, 107, 107);
+        background: linear-gradient(to right, rgb(108, 110, 111), rgb(76, 69, 69), rgb(78, 80, 78));
+        background-size: 900px 10px;
+        animation: loder 1.5s linear  infinite ;
+
+        }
+    }
+
+    & .chat-container{
+        width: auto; 
+        margin: 2rem 2rem  2rem 1rem;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+       
+    }
+
+  
+
+    & .user-chat{
+        color: var(--btn-background-color);
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        justify-content: flex-end;
+    }
+
+    & .ai-avatar{
+        color: var(--btn-background-color);
+        display: flex;
+        padding: 5px;
+        justify-content: flex-start;
+        align-items: baseline;
+    }
+
+   & p{  
+        margin-left: 15px;
+        padding: 15px;
+        background-color: var(--p-background-color);
+        border-radius: 20px;
+        max-width: 70%;
+        scrollbar-width: none;
+       
+    }
+
+    
+
+    & .user-avatar{
+        width: 50px;
+         margin-left: 13px;
+        box-shadow: 2px 2px 20px var(--btn-background-color) ;
+        border-radius: 50px;
+    }
+
+   
+
+    & .robot-avatar{
+        width: 50px;
+        margin-left: 13px;  
+        box-shadow: 2px 2px 20px var(--btn-background-color) ;
+        border-radius: 50px;
+        
+    }
+
+    
+    
+}
+.topsection::-webkit-scrollbar {
+    display: none;
+    width: 0px ;
+    height: 0px;
+    background: transparent;
+}
+
+
+.headings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 2vmax;
+    
+}
+
+.headings span:nth-child(1){
+    font-size: 2em;
+    background: linear-gradient(to right , rgb(131, 174, 231), rgba(255, 64, 0, 0.622), rgb(243, 169, 255));
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.headings span:nth-child(2){
+    font-size: 1em;
+    background: linear-gradient(to right , rgb(131, 174, 231), rgba(247, 169, 143, 0.622), rgb(243, 169, 255));
+    background-clip: text;
+    color: transparent;
+    font-weight: 500;
+}
+
+.headings span:nth-child(3){
+    font-size: 0.7em;
+    font-weight: 500;
+    color: var(--color);
+    opacity: 0.8;
+}
+
+
+.buttomsection{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     height: 25vh;
+     width: 100%;
+    
+}
+
+.input-area{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     position: relative;
+     
+    & input{
+        width: 40vw;
+        height: 50px;
+        padding-left: 15px;
+        overflow: hidden;
+        border: none;
+         box-shadow:  2px 2px 20px var(--color);
+        border-radius: 30px;
+        background-color: var(--background-color);
+        color: var(--color);
+    };
+
+    & .sendbtn{
+       
+        padding: 10px;
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        box-shadow:  2px 2px 20px var(--color);
+        transition: all 0.5ms;
+        cursor: pointer;
+    }
+
+    & svg:active{
+        transform: scale(0.95);
+    }
+
+    & .thingking{
+        font-size: 0.9rem;
+        
+        pointer-events: none;
+        position: absolute;
+        right: 140px;
+        opacity: 0.7;
+        animation: dup-dup 0.7s infinite alternate;
+    }
+}
+@keyframes dup-dup {
+    from {
+        opacity: 0.4; 
+    }
+    to {
+        opacity: 0.9;  
+    }
+}
+
+
+
