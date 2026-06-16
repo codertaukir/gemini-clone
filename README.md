@@ -1,16 +1,48 @@
-# React + Vite
+# Gemini Clone 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey! This is a full-stack-looking, fully responsive **Google Gemini Clone** built using **React.js** and Vite. It connects directly with Google's official `@google/genai` SDK to fetch real-time AI responses using the `gemini-2.5-flash` model. 
 
-Currently, two official plugins are available:
+Mainly made this project to clean up my frontend layouts, practice Context API for global state management, and understand how to securely handle third-party SDKs on the client side.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+##  Tech Stack & Tools
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **Frontend:** React.js (Functional Components, Hooks)
+* **Build Tool:** Vite (Super fast bundling)
+* **Styling:** Custom CSS (Handcrafted layout, sidebar animations)
+* **Icons:** `react-icons` (GiHamburgerMenu, FaPlus, FiMessageSquare, IoClose)
+* **API Integration:** Official `@google/genai` SDK
+* **Model Used:** `gemini-2.5-flash`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Key Features Inside
+
+1. **Collapsible Sidebar:** Smooth state-controlled toggle (`extand` state) that minimizes the sidebar into a clean icon-only navigation bar.
+2. **Context-Driven Architecture:** All states (`input`, `prevData`, `loading`, `showResult`) are globally managed inside a custom React Context provider to avoid prop-drilling.
+3. **Smart History Log:** Your recent prompt history automatically appends to the sidebar. It includes a duplicate checker (`prev.includes`) so things don't get messy if you query the same thing twice.
+4. **String Truncation:** Clean text logic in the sidebar that caps long questions using word splits (`item.split(" ")`) and appends a clean `...` without breaking the text blocks.
+5. **Secure Environment Variables:** Uses Vite’s standard `import.meta.env` system to make sure private API keys stay hidden on the frontend.
+
+---
+
+##  Project Structure Snapshot
+
+```text
+GEMINI-CLONE/
+  ├── node_modules/
+  ├── src/
+  │   ├── components/
+  │   │   └── Sidebar/
+  │   │       ├── Sidebar.jsx
+  │   │       └── sidebar.css
+  │   ├── context/
+  │   │   └── UserContext.jsx
+  │   ├── gemini.js         # Core API setup and model calls
+  │   ├── main.jsx
+  │   └── App.jsx
+  ├── .env                 # Root level env configurations (Hidden)
+  ├── .gitignore           # Making sure node_modules & keys don't leak
+  ├── package.json
+  └── vite.config.js
